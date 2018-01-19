@@ -44,10 +44,10 @@
             @if (Input::get('status')!='deleted')
               <div id="toolbar">
                 <select name="bulk_actions" class="form-control select2" style="width: 300px;">
-                  <option value="edit">Bulk Edit</option>
-                  <option value="delete">Bulk Delete</option>
+                  <option value="edit">批量编辑</option>
+                  <option value="delete">批量删除</option>
                 </select>
-                <button class="btn btn-primary" id="bulkEdit" disabled>Go</button>
+                <button class="btn btn-primary" id="bulkEdit" disabled>开始</button>
               </div>
             @endif
 

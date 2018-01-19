@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update General Settings
+    通用设置
     @parent
 @stop
 

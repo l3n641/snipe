@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Security Settings
+    安全设置
     @parent
 @stop
 
@@ -27,7 +27,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-lock"></i> Security
+                        <i class="fa fa-lock"></i> 安全
                     </h4>
                 </div>
                 <div class="box-body">

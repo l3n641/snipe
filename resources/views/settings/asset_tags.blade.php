@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Asset Tag Settings
+    资产标签设置
     @parent
 @stop
 
@@ -32,7 +32,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-list-ol"></i> Asset Tags
+                        <i class="fa fa-list-ol"></i> 资产标签
                     </h4>
                 </div>
                 <div class="box-body">

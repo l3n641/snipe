@@ -29,7 +29,7 @@
     <!-- Custom Tabs -->
     <div class="nav-tabs-custom">
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#tab_1" data-toggle="tab">Details</a></li>
+        <li class="active"><a href="#tab_1" data-toggle="tab">详细信息</a></li>
         <li><a href="#tab_2" data-toggle="tab">{{ trans('general.file_uploads') }}</a></li>
         <li><a href="#tab_3" data-toggle="tab">{{ trans('admin/licenses/general.checkout_history') }}</a></li>
         <li class="pull-right"><a href="#" data-toggle="modal" data-target="#uploadFileModal"><i class="fa fa-paperclip"></i> {{ trans('button.upload') }}</a></li>
@@ -53,7 +53,7 @@
                     @if ($license->licenseseats)
                       @foreach ($license->licenseseats as $licensedto)
                       <tr>
-                        <td>Seat {{ $count }} </td>
+                        <td>位 {{ $count }} </td>
                         <td>
                           @if (($licensedto->user) && ($licensedto->deleted_at == NULL))
 
@@ -104,7 +104,7 @@
                                   {{ trans('general.checkin') }}
                                 </a>
                               @else
-                                <span>Assigned</span>
+                                <span>分配</span>
                               @endif
                             @else
                               <a href="{{ route('licenses.checkout', $license->id) }}" class="btn btn-sm bg-maroon">
@@ -336,7 +336,7 @@
                 <td>
                 @if ($file->filename)
                   <a href="{{ route('show/licensefile', [$license->id, $file->id]) }}" class="btn btn-default">
-                    Download
+                    下载
                   </a>
                 @endif
                 </td>
@@ -391,7 +391,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="uploadFileModalLabel">Upload File</h4>
+        <h4 class="modal-title" id="uploadFileModalLabel">上传文件</h4>
       </div>
       {{ Form::open([
       'method' => 'POST',

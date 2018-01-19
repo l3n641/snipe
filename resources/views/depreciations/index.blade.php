@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Asset Depreciations
+资产折旧
 @parent
 @stop
 

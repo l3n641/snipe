@@ -5,87 +5,87 @@ return array(
     'Global' => array(
         array(
             'permission' => 'superuser',
-            'label'      => 'Super User',
-            'note'       => 'Determines whether the user has full access to all aspects of the admin. This setting overrides any more specific permissions throughout the system. ',
+            'label'      => '超级管理员',
+            'note'       => '确定用户是否完全访问系统的所有方面。此设置覆盖整个系统中的任何特定权限。 ',
             'display'    => true,
         ),
     ),
 
     'Admin' => array(
         array(
-            'permission' => 'admin',
+            'permission' => '管理员',
             'label'      => '',
-            'note'       => 'Determines whether the user has access to most aspects of the admin. ',
+            'note'       => '确定用户是否可以访问管理员的大部分方面。 ',
             'display'    => true,
         )
     ),
 
     'Reports' => array(
         array(
-            'permission' => 'reports.view',
-            'label'      => 'View',
-            'note'       => 'Determines whether the user has the ability to view reports.',
+            'permission' => '报告.查看',
+            'label'      => '查看',
+            'note'       => '决定用户是否有权限查看.',
             'display'    => true,
         ),
     ),
 
     'Assets' => array(
         array(
-            'permission' => 'assets.view',
-            'label'      => 'View ',
+            'permission' => '资产.查看',
+            'label'      => '查看 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'assets.create',
-            'label'      => 'Create ',
+            'permission' => '资产.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'assets.edit',
-            'label'      => 'Edit  ',
+            'permission' => '资产.编辑',
+            'label'      => '编辑  ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'assets.delete',
-            'label'      => 'Delete ',
+            'permission' => '资产.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'assets.checkout',
-            'label'      => 'Checkout ',
+            'permission' => '资产.借出',
+            'label'      => '借出 ',
             'note'       => '',
             'display'    => false,
         ),
 
         array(
-            'permission' => 'assets.checkin',
-            'label'      => 'Checkin ',
+            'permission' => '资产.归还',
+            'label'      => '归还 ',
             'note'       => '',
             'display'    => true,
         ),
 
         array(
-            'permission' => 'assets.checkout',
-            'label'      => 'Checkout ',
+            'permission' => '资产.借出',
+            'label'      => '借出 ',
             'note'       => '',
             'display'    => true,
         ),
 
         array(
-            'permission' => 'assets.audit',
-            'label'      => 'Audit ',
-            'note'       => 'Allows the user to mark an asset as physically inventoried.',
+            'permission' => '资产.授权',
+            'label'      => '授权 ',
+            'note'       => '允许用户标记的资产为身体财产.',
             'display'    => true,
         ),
 
 
         array(
-            'permission' => 'assets.view.requestable',
-            'label'      => 'View Requestable Assets',
+            'permission' => '资产.查看.请求',
+            'label'      => '查看请求的资产',
             'note'       => '',
             'display'    => true,
         ),
@@ -94,38 +94,38 @@ return array(
 
     'Accessories' => array(
         array(
-            'permission' => 'accessories.view',
-            'label'      => 'View ',
+            'permission' => '附属品.查看',
+            'label'      => '查看 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'accessories.create',
-            'label'      => 'Create ',
+            'permission' => '附属品.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'accessories.edit',
-            'label'      => 'Edit ',
+            'permission' => '附属品.编辑',
+            'label'      => '编辑',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'accessories.delete',
-            'label'      => 'Delete ',
+            'permission' => '附属品.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'accessories.checkout',
-            'label'      => 'Checkout ',
+            'permission' => '附属品.借出',
+            'label'      => '借出 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'accessories.checkin',
-            'label'      => 'Checkin ',
+            'permission' => '附属品.归还',
+            'label'      => '归还 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -133,32 +133,32 @@ return array(
 
     'Consumables' => array(
         array(
-            'permission' => 'consumables.view',
-            'label'      => 'View',
+            'permission' => '消耗品.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'consumables.create',
-            'label'      => 'Create ',
+            'permission' => '消耗品.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'consumables.edit',
-            'label'      => 'Edit ',
+            'permission' => '消耗品.编辑',
+            'label'      => '编辑 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'consumables.delete',
-            'label'      => 'Delete ',
+            'permission' => '消耗品.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'consumables.checkout',
-            'label'      => 'Checkout ',
+            'permission' => '消耗品.借出',
+            'label'      => '借出 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -167,38 +167,38 @@ return array(
 
     'Licenses' => array(
         array(
-            'permission' => 'licenses.view',
-            'label'      => 'View',
+            'permission' => '许可证.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'licenses.create',
-            'label'      => 'Create ',
+            'permission' => '许可证.创建',
+            'label'      => '创建',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'licenses.edit',
-            'label'      => 'Edit ',
+            'permission' => '许可证.编辑',
+            'label'      => '编辑 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'licenses.delete',
-            'label'      => 'Delete ',
+            'permission' => '许可证.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'licenses.checkout',
-            'label'      => 'Checkout ',
+            'permission' => '许可证.借出',
+            'label'      => '借出 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'licenses.keys',
-            'label'      => 'View License Keys',
+            'permission' => '许可证.秘钥',
+            'label'      => '查看许可证秘钥',
             'note'       => '',
             'display'    => true,
         ),
@@ -213,32 +213,32 @@ return array(
             'display'    => true,
         ),
         array(
-            'permission' => 'components.create',
-            'label'      => 'Create ',
+            'permission' => '组件.创建',
+            'label'      => '创建',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'components.edit',
-            'label'      => 'Edit ',
+            'permission' => '组件.编辑',
+            'label'      => '编辑',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'components.delete',
-            'label'      => 'Delete ',
+            'permission' => '组件.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'components.checkout',
-            'label'      => 'Checkout ',
+            'permission' => '组件.借出',
+            'label'      => '借出',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'components.checkin',
-            'label'      => 'Checkin ',
+            'permission' => '组件.归还',
+            'label'      => '归还 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -247,26 +247,26 @@ return array(
 
     'Users' => array(
         array(
-            'permission' => 'users.view',
-            'label'      => 'View ',
+            'permission' => '用户.查看',
+            'label'      => '查看 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'users.create',
-            'label'      => 'Create Users',
+            'permission' => '用户.创建',
+            'label'      => '创建用户',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'users.edit',
-            'label'      => 'Edit Users',
+            'permission' => '用户.编辑',
+            'label'      => '编辑用户',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'users.delete',
-            'label'      => 'Delete Users',
+            'permission' => '用户.删除',
+            'label'      => '删除用户',
             'note'       => '',
             'display'    => true,
         ),
@@ -276,26 +276,26 @@ return array(
 
     'Models' => array(
         array(
-            'permission' => 'models.view',
-            'label'      => 'View ',
+            'permission' => '模型.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'models.create',
-            'label'      => 'Create ',
+            'permission' => '模型.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'models.edit',
-            'label'      => 'Edit  ',
+            'permission' => '模型.编辑',
+            'label'      => '编辑 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'models.delete',
-            'label'      => 'Delete ',
+            'permission' => '模型.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -304,26 +304,26 @@ return array(
 
     'Categories' => array(
         array(
-            'permission' => 'categories.view',
+            'permission' => '种类.查看',
             'label'      => 'View ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'categories.create',
-            'label'      => 'Create ',
+            'permission' => '种类.创建',
+            'label'      => '创建',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'categories.edit',
-            'label'      => 'Edit  ',
+            'permission' => '种类.编辑',
+            'label'      => '编辑  ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'categories.delete',
-            'label'      => 'Delete ',
+            'permission' => '种类.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
@@ -331,26 +331,26 @@ return array(
 
     'Departments' => array(
         array(
-            'permission' => 'departments.view',
-            'label'      => 'View ',
+            'permission' => '部门.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'departments.create',
-            'label'      => 'Create ',
+            'permission' => '部门.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'departments.edit',
-            'label'      => 'Edit  ',
+            'permission' => '部门.编辑',
+            'label'      => '编辑 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'departments.delete',
-            'label'      => 'Delete ',
+            'permission' => '部门.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
@@ -358,26 +358,26 @@ return array(
 
     'Status Labels' => array(
         array(
-            'permission' => 'statuslabels.view',
-            'label'      => 'View ',
+            'permission' => '状态标签.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'statuslabels.create',
-            'label'      => 'Create ',
+            'permission' => '状态标签.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'statuslabels.edit',
-            'label'      => 'Edit  ',
+            'permission' => '状态标签.编辑',
+            'label'      => '编辑',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'statuslabels.delete',
-            'label'      => 'Delete ',
+            'permission' => '状态标签.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
@@ -385,26 +385,26 @@ return array(
 
     'Custom Fields' => array(
         array(
-            'permission' => 'customfields.view',
-            'label'      => 'View',
+            'permission' => '自定义字段.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'customfields.create',
-            'label'      => 'Create',
+            'permission' => '自定义字段.创建',
+            'label'      => '创建',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'customfields.edit',
-            'label'      => 'Edit',
+            'permission' => '自定义字段.编辑',
+            'label'      => '编辑',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'customfields.delete',
-            'label'      => 'Delete',
+            'permission' => '自定义字段.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
@@ -414,26 +414,26 @@ return array(
 
     'Suppliers' => array(
         array(
-            'permission' => 'suppliers.view',
-            'label'      => 'View ',
+            'permission' => '供应商.查看',
+            'label'      => '查看 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'suppliers.create',
-            'label'      => 'Create ',
+            'permission' => '供应商.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'suppliers.edit',
-            'label'      => 'Edit  ',
+            'permission' => '供应商.编辑',
+            'label'      => '编辑  ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'suppliers.delete',
-            'label'      => 'Delete ',
+            'permission' => '供应商.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -442,26 +442,26 @@ return array(
 
     'Manufacturers' => array(
         array(
-            'permission' => 'manufacturers.view',
-            'label'      => 'View ',
+            'permission' => '制造商.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'manufacturers.create',
-            'label'      => 'Create ',
+            'permission' => '制造商.创建',
+            'label'      => '创建',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'manufacturers.edit',
-            'label'      => 'Edit  ',
+            'permission' => '制造商.编辑',
+            'label'      => '编辑  ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'manufacturers.delete',
-            'label'      => 'Delete ',
+            'permission' => '制造商.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -469,26 +469,26 @@ return array(
 
     'Depreciations' => array(
         array(
-            'permission' => 'depreciations.view',
-            'label'      => 'View ',
+            'permission' => '折旧.查看',
+            'label'      => '查看 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'depreciations.create',
-            'label'      => 'Create ',
+            'permission' => '折旧.创建',
+            'label'      => '创建',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'depreciations.edit',
-            'label'      => 'Edit  ',
+            'permission' => '折旧.编辑',
+            'label'      => '编辑 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'depreciations.delete',
-            'label'      => 'Delete ',
+            'permission' => '折旧.删除',
+            'label'      => '删除',
             'note'       => '',
             'display'    => true,
         ),
@@ -496,26 +496,26 @@ return array(
 
     'Locations' => array(
         array(
-            'permission' => 'locations.view',
-            'label'      => 'View ',
+            'permission' => '位置.查看',
+            'label'      => '查看',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'locations.create',
-            'label'      => 'Create ',
+            'permission' => '位置.创建',
+            'label'      => '创建 ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'locations.edit',
-            'label'      => 'Edit  ',
+            'permission' => '位置.编辑',
+            'label'      => '编辑  ',
             'note'       => '',
             'display'    => true,
         ),
         array(
-            'permission' => 'locations.delete',
-            'label'      => 'Delete ',
+            'permission' => '位置.删除',
+            'label'      => '删除 ',
             'note'       => '',
             'display'    => true,
         ),
@@ -526,16 +526,16 @@ return array(
 
     'Self' => array(
         array(
-            'permission' => 'self.two_factor',
-            'label'      => 'Two-Factor Authentication',
-            'note'       => 'The user may disable/enable two-factor authentication themselves if two-factor is enabled and set to selective.',
+            'permission' => '自身.双因素',
+            'label'      => '双因素认证',
+            'note'       => '如果两因素是启用和设置选择，用户可以禁用/启用双因素认证自己。',
             'display'    => true,
         ),
 
         array(
-            'permission' => 'self.api',
-            'label'      => 'Create API Keys',
-            'note'       => 'The user create personal API keys to utilize the REST API.',
+            'permission' => '自身.api',
+            'label'      => '创建API',
+            'note'       => '用户创建个人API来利用REST API.',
             'display'    => true,
         ),
 

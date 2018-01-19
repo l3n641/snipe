@@ -21,10 +21,10 @@
                     </label></div>
                 <div class="col-md-8 col-xs-12 required">
                     <select class="select2" id="modal-category_type" style="width: 100%">
-                        <option value="asset">Asset</option>
-                        <option value="accessory" disabled>Accessory</option>
-                        <option value="consumable" disabled>Consumable</option>
-                        <option value="component" disabled>Component</option>
+                        <option value="asset">资产</option>
+                        <option value="accessory" >附件</option>
+                        <option value="consumable" >耗材</option>
+                        <option value="component" >组件</option>
                     </select>
                 </div>
             </div>
