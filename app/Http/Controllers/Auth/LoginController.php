@@ -253,7 +253,7 @@ class LoginController extends Controller
     {
         $request->session()->forget('2fa_authed');
         Auth::logout();
-        return redirect()->route('login')->with('success', 'You have successfully logged out!');
+        return redirect()->route('login')->with('success', '你已经成功退出');
     }
 
 

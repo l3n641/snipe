@@ -2,7 +2,7 @@
 
 return array(
 
-    'Global' => array(
+    '全局' => array(
         array(
             'permission' => 'superuser',
             'label'      => '超级管理员',
@@ -11,7 +11,7 @@ return array(
         ),
     ),
 
-    'Admin' => array(
+    '管理员' => array(
         array(
             'permission' => '管理员',
             'label'      => '',
@@ -20,7 +20,7 @@ return array(
         )
     ),
 
-    'Reports' => array(
+    '报告' => array(
         array(
             'permission' => '报告.查看',
             'label'      => '查看',
@@ -29,7 +29,7 @@ return array(
         ),
     ),
 
-    'Assets' => array(
+    '资产' => array(
         array(
             'permission' => '资产.查看',
             'label'      => '查看 ',
@@ -92,7 +92,7 @@ return array(
 
     ),
 
-    'Accessories' => array(
+    '附属品' => array(
         array(
             'permission' => '附属品.查看',
             'label'      => '查看 ',
@@ -131,7 +131,7 @@ return array(
         ),
     ),
 
-    'Consumables' => array(
+    '消耗品' => array(
         array(
             'permission' => '消耗品.查看',
             'label'      => '查看',
@@ -165,7 +165,7 @@ return array(
     ),
 
 
-    'Licenses' => array(
+    '许可证' => array(
         array(
             'permission' => '许可证.查看',
             'label'      => '查看',
@@ -205,7 +205,7 @@ return array(
     ),
 
 
-    'Components' => array(
+    '组件' => array(
         array(
             'permission' => 'components.view',
             'label'      => 'View',
@@ -245,7 +245,7 @@ return array(
 
     ),
 
-    'Users' => array(
+    '用户' => array(
         array(
             'permission' => '用户.查看',
             'label'      => '查看 ',
@@ -274,7 +274,7 @@ return array(
     ),
 
 
-    'Models' => array(
+    '模型' => array(
         array(
             'permission' => '模型.查看',
             'label'      => '查看',
@@ -302,7 +302,7 @@ return array(
 
     ),
 
-    'Categories' => array(
+    '种类' => array(
         array(
             'permission' => '种类.查看',
             'label'      => 'View ',
@@ -329,7 +329,7 @@ return array(
         ),
     ),
 
-    'Departments' => array(
+    '部门' => array(
         array(
             'permission' => '部门.查看',
             'label'      => '查看',
@@ -356,7 +356,7 @@ return array(
         ),
     ),
 
-    'Status Labels' => array(
+    '状态标签' => array(
         array(
             'permission' => '状态标签.查看',
             'label'      => '查看',
@@ -383,7 +383,7 @@ return array(
         ),
     ),
 
-    'Custom Fields' => array(
+    '自定义字段' => array(
         array(
             'permission' => '自定义字段.查看',
             'label'      => '查看',
@@ -412,7 +412,7 @@ return array(
 
 
 
-    'Suppliers' => array(
+    '供应商' => array(
         array(
             'permission' => '供应商.查看',
             'label'      => '查看 ',
@@ -440,7 +440,7 @@ return array(
     ),
 
 
-    'Manufacturers' => array(
+    '制造商' => array(
         array(
             'permission' => '制造商.查看',
             'label'      => '查看',
@@ -467,7 +467,7 @@ return array(
         ),
     ),
 
-    'Depreciations' => array(
+    '折旧' => array(
         array(
             'permission' => '折旧.查看',
             'label'      => '查看 ',
@@ -494,7 +494,7 @@ return array(
         ),
     ),
 
-    'Locations' => array(
+    '位置' => array(
         array(
             'permission' => '位置.查看',
             'label'      => '查看',
@@ -524,7 +524,7 @@ return array(
 
 
 
-    'Self' => array(
+    '自身' => array(
         array(
             'permission' => '自身.双因素',
             'label'      => '双因素认证',
