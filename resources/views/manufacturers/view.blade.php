@@ -29,16 +29,16 @@
 
       <ul class="nav nav-tabs">
         <li class="active">
-          <a href="#assets" data-toggle="tab">Assets</a>
+          <a href="#assets" data-toggle="tab">资产</a>
         </li>
         <li>
-          <a href="#licenses" data-toggle="tab">Licenses</a>
+          <a href="#licenses" data-toggle="tab">许可证</a>
         </li>
         <li>
-          <a href="#accessories" data-toggle="tab">Accessories</a>
+          <a href="#accessories" data-toggle="tab">附件</a>
         </li>
         <li>
-          <a href="#consumables" data-toggle="tab">Consumables</a>
+          <a href="#consumables" data-toggle="tab">耗材</a>
         </li>
       </ul>
 

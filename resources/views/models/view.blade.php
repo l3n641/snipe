@@ -51,11 +51,11 @@
                       'id' => 'bulkForm']) }}
                   <div id="toolbar">
                       <select name="bulk_actions" class="form-control select2">
-                          <option value="edit">Edit</option>
-                          <option value="delete">Delete</option>
-                          <option value="labels">Generate Labels</option>
+                          <option value="edit">编辑</option>
+                          <option value="delete">删除</option>
+                          <option value="labels">创建标签</option>
                       </select>
-                      <button class="btn btn-primary" id="bulkEdit" disabled>Go</button>
+                      <button class="btn btn-primary" id="bulkEdit" disabled>开始</button>
                   </div>
 
                 <table
@@ -93,7 +93,7 @@
       <div class="box box-default">
               <div class="box-header with-border">
                   <div class="box-heading">
-                      <h3 class="box-title"> More Info:</h3>
+                      <h3 class="box-title"> 更多信息:</h3>
                   </div>
               </div><!-- /.box-header -->
           <div class="box-body">

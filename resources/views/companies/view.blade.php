@@ -72,7 +72,7 @@
                                     <th data-searchable="false" data-formatter="modelsLinkObjFormatter" data-sortable="false" data-field="model">{{ trans('admin/hardware/form.model') }}</th>
                                     <th data-searchable="false" data-sortable="false" data-field="asset_tag">{{ trans('admin/hardware/form.tag') }}</th>
                                     <th data-searchable="false" data-sortable="false" data-field="serial">{{ trans('admin/hardware/form.serial') }}</th>
-                                    <th data-searchable="false" data-sortable="false" data-formatter="hardwareInOutFormatter" data-field="checkincheckout">Checkin/Checkout</th>
+                                    <th data-searchable="false" data-sortable="false" data-formatter="hardwareInOutFormatter" data-field="checkincheckout">归还/借出</th>
                                     <th data-searchable="false" data-sortable="false" data-field="actions" data-formatter="hardwareActionsFormatter">{{ trans('general.action') }}</th>
                                 </tr>
                                 </thead>
@@ -102,8 +102,8 @@
                             <table class="display table table-hover">
                                 <thead>
                                 <tr>
-                                    <th class="col-md-5">Name</th>
-                                    <th class="col-md-1 hidden-print">Actions</th>
+                                    <th class="col-md-5">姓名</th>
+                                    <th class="col-md-1 hidden-print">操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>

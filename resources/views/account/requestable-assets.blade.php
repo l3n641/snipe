@@ -129,7 +129,7 @@
                         <div class="col-md-12">
 
                             @if ($models->count() > 0)
-                            <h4>Requestable Models</h4>
+                            <h4>申请类型</h4>
                                 <table
                                         name="requested-assets"
                                         data-toolbar="#toolbar"

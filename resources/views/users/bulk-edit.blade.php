@@ -49,14 +49,14 @@
                         <!-- activated -->
                         <div class="form-group">
                             <div class="col-sm-3 control-label">
-                                Activated
+                               激活
                             </div>
                             <div class="col-sm-9">
                                 <div class="checkbox">
                                     <label for="activated">
-                                        {{ Form::radio('activated', '', true) }} Do not change activation status <br>
-                                        {{ Form::radio('activated', '1', Input::old('activated')) }}  User is activated<br>
-                                        {{ Form::radio('activated', '0', Input::old('activated')) }}  User is de-activated
+                                        {{ Form::radio('activated', '', true) }} 不改变激活状态 <br>
+                                        {{ Form::radio('activated', '1', Input::old('activated')) }}  用户已激活<br>
+                                        {{ Form::radio('activated', '0', Input::old('activated')) }}  用户被激活
 
                                     </label>
                                 </div>
