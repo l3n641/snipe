@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Barcode Settings
+   更新二维码的设置
     @parent
 @stop
 

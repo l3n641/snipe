@@ -65,7 +65,7 @@
 
 
       </form>
-      <p>Backup files are located in: {{ $path  }}</p>
+      <p>备份保存在: {{ $path  }}</p>
 
 
 

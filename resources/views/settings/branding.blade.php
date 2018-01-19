@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Branding Settings
+    更新品牌设置
     @parent
 @stop
 

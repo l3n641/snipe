@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Slack Settings
+    弹性设置
     @parent
 @stop
 

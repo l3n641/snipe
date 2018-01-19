@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Asset Tag Settings
+    资产标签设置
     @parent
 @stop
 

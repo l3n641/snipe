@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Localization Settings
+    地区设置
     @parent
 @stop
 

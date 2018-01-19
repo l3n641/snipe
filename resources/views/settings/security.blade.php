@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Security Settings
+    安全设置
     @parent
 @stop
 

@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Label Settings
+    标签设置
     @parent
 @stop
 

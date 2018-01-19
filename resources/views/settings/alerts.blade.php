@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Alert Settings
+    提示设置
     @parent
 @stop
 
