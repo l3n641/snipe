@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Helpers;
 
 use DB;
@@ -182,8 +183,8 @@ class Helper
     public static function categoryList($category_type = null)
     {
         $categories = Category::orderBy('name', 'asc')
-                ->whereNull('deleted_at')
-                ->orderBy('name', 'asc');
+            ->whereNull('deleted_at')
+            ->orderBy('name', 'asc');
         if (!empty($category_type)) {
             $categories = $categories->where('category_type', '=', $category_type);
         }
@@ -208,7 +209,7 @@ class Helper
         return array('' => trans('general.select_department')) + $departments->pluck('name', 'id')->toArray();
 
     }
-    
+
 
     /**
      * Get the list of suppliers in an array to make a dropdown menu
@@ -281,7 +282,7 @@ class Helper
     public static function statusTypeList()
     {
         $statuslabel_types =
-              array('' => trans('admin/hardware/form.select_statustype'))
+            array('' => trans('admin/hardware/form.select_statustype'))
             + array('deployable' => trans('admin/hardware/general.deployable'))
             + array('pending' => trans('admin/hardware/general.pending'))
             + array('undeployable' => trans('admin/hardware/general.undeployable'))
@@ -299,10 +300,10 @@ class Helper
     public static function managerList()
     {
         $manager_list = array('' => trans('general.select_user')) +
-                        User::where('deleted_at', '=', null)
-                        ->orderBy('last_name', 'asc')
-                        ->orderBy('first_name', 'asc')->get()
-                        ->pluck('complete_name', 'id')->toArray();
+            User::where('deleted_at', '=', null)
+                ->orderBy('last_name', 'asc')
+                ->orderBy('first_name', 'asc')->get()
+                ->pluck('complete_name', 'id')->toArray();
 
         return $manager_list;
     }
@@ -330,9 +331,29 @@ class Helper
      */
     public static function categoryTypeList()
     {
-        $category_types = array('' => '','accessory' => 'Accessory', 'asset' => 'Asset', 'consumable' => 'Consumable','component' => 'Component');
+        $category_types = array('' => '', 'accessory' => 'Accessory', 'asset' => 'Asset', 'consumable' => 'Consumable', 'component' => 'Component');
+        $category_types = static::translateCategoriesType($category_types);
         return $category_types;
     }
+
+    public static function translateCategoriesType($categories)
+    {
+        $translate = [
+            'accessory' => '附属品',
+            'asset' => '资产',
+            'consumable' => '消耗品',
+            'component' => '组件',
+        ];
+
+        if (is_array($categories)) {
+            return array_merge($categories, $translate);
+        }
+
+        return array_key_exists($categories, $translate) ? $translate[$categories] : $categories;
+
+
+    }
+
 
     /**
      * Get the list of users in an array to make a dropdown menu
@@ -343,12 +364,12 @@ class Helper
      */
     public static function usersList()
     {
-        $users_list =   array( '' => trans('general.select_user')) +
-                        Company::scopeCompanyables(User::where('deleted_at', '=', null))
-                        ->where('show_in_list', '=', 1)
-                        ->orderBy('last_name', 'asc')
-                        ->orderBy('first_name', 'asc')->get()
-                        ->pluck('complete_name', 'id')->toArray();
+        $users_list = array('' => trans('general.select_user')) +
+            Company::scopeCompanyables(User::where('deleted_at', '=', null))
+                ->where('show_in_list', '=', 1)
+                ->orderBy('last_name', 'asc')
+                ->orderBy('first_name', 'asc')->get()
+                ->pluck('complete_name', 'id')->toArray();
 
         return $users_list;
     }
@@ -392,7 +413,7 @@ class Helper
     public static function customFieldsetList()
     {
         $customfields = array('' => trans('admin/models/general.no_custom_field')) + CustomFieldset::pluck('name', 'id')->toArray();
-        return  $customfields;
+        return $customfields;
     }
 
     /**
@@ -406,7 +427,7 @@ class Helper
     {
         $keys = array_keys(CustomField::$PredefinedFormats);
         $stuff = array_combine($keys, $keys);
-        return $stuff+["" => trans('admin/custom_fields/general.custom_format')];
+        return $stuff + ["" => trans('admin/custom_fields/general.custom_format')];
     }
 
     /**
@@ -482,7 +503,7 @@ class Helper
                 $items_array[$all_count]['type'] = 'consumables';
                 $items_array[$all_count]['percent'] = $percent;
                 $items_array[$all_count]['remaining'] = $avail;
-                $items_array[$all_count]['min_amt']=$consumable->min_amt;
+                $items_array[$all_count]['min_amt'] = $consumable->min_amt;
                 $all_count++;
             }
 
@@ -504,7 +525,7 @@ class Helper
                 $items_array[$all_count]['type'] = 'accessories';
                 $items_array[$all_count]['percent'] = $percent;
                 $items_array[$all_count]['remaining'] = $avail;
-                $items_array[$all_count]['min_amt']=$accessory->min_amt;
+                $items_array[$all_count]['min_amt'] = $accessory->min_amt;
                 $all_count++;
             }
 
@@ -524,12 +545,11 @@ class Helper
                 $items_array[$all_count]['type'] = 'components';
                 $items_array[$all_count]['percent'] = $percent;
                 $items_array[$all_count]['remaining'] = $avail;
-                $items_array[$all_count]['min_amt']=$component->min_amt;
+                $items_array[$all_count]['min_amt'] = $component->min_amt;
                 $all_count++;
             }
 
         }
-
 
 
         return $items_array;
@@ -552,7 +572,7 @@ class Helper
         $filetype = @finfo_file($finfo, $file);
         finfo_close($finfo);
 
-        if (($filetype=="image/jpeg") || ($filetype=="image/jpg")   || ($filetype=="image/png") || ($filetype=="image/bmp") || ($filetype=="image/gif")) {
+        if (($filetype == "image/jpeg") || ($filetype == "image/jpg") || ($filetype == "image/png") || ($filetype == "image/bmp") || ($filetype == "image/gif")) {
             return $filetype;
         }
 
@@ -650,7 +670,7 @@ class Helper
     public static function array_smart_fetch(array $array, $key, $default = '')
     {
         array_change_key_case($array, CASE_LOWER);
-        return array_key_exists(strtolower($key), array_change_key_case($array)) ? e(trim($array[ $key ])) : $default;
+        return array_key_exists(strtolower($key), array_change_key_case($array)) ? e(trim($array[$key])) : $default;
     }
 
 
@@ -676,7 +696,7 @@ class Helper
                 return Crypt::decrypt($string);
 
             } catch (DecryptException $e) {
-                return 'Error Decrypting: '.$e->getMessage();
+                return 'Error Decrypting: ' . $e->getMessage();
             }
 
         }
@@ -685,8 +705,8 @@ class Helper
     }
 
 
-
-    public static function formatStandardApiResponse($status, $payload = null, $messages = null) {
+    public static function formatStandardApiResponse($status, $payload = null, $messages = null)
+    {
 
         $array['status'] = $status;
         $array['messages'] = $messages;
@@ -701,14 +721,16 @@ class Helper
     /*
     Possible solution for unicode fieldnames
     */
-    public static function make_slug($string) {
+    public static function make_slug($string)
+    {
         return preg_replace('/\s+/u', '_', trim($string));
     }
 
 
-    public static function getFormattedDateObject($date, $type = 'datetime', $array = true) {
+    public static function getFormattedDateObject($date, $type = 'datetime', $array = true)
+    {
 
-        if ($date=='') {
+        if ($date == '') {
             return null;
         }
 
@@ -717,7 +739,7 @@ class Helper
 
         if ($type == 'datetime') {
             $dt['datetime'] = $tmp_date->format('Y-m-d H:i:s');
-            $dt['formatted'] = $tmp_date->format($settings->date_display_format .' '. $settings->time_display_format);
+            $dt['formatted'] = $tmp_date->format($settings->date_display_format . ' ' . $settings->time_display_format);
         } else {
             $dt['date'] = $tmp_date->format('Y-m-d');
             $dt['formatted'] = $tmp_date->format($settings->date_display_format);
@@ -729,7 +751,6 @@ class Helper
         return $dt['formatted'];
 
     }
-
 
 
 }

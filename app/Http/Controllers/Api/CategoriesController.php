@@ -21,9 +21,9 @@ class CategoriesController extends Controller
     public function index(Request $request)
     {
         $this->authorize('view', Category::class);
-        $allowed_columns = ['id', 'name','category_type', 'category_type','use_default_eula','eula_text', 'require_acceptance','checkin_email', 'assets_count', 'accessories_count', 'consumables_count', 'components_count', 'image'];
+        $allowed_columns = ['id', 'name', 'category_type', 'category_type', 'use_default_eula', 'eula_text', 'require_acceptance', 'checkin_email', 'assets_count', 'accessories_count', 'consumables_count', 'components_count', 'image'];
 
-        $categories = Category::select(['id', 'created_at', 'updated_at', 'name','category_type','use_default_eula','eula_text', 'require_acceptance','checkin_email','image'])
+        $categories = Category::select(['id', 'created_at', 'updated_at', 'name', 'category_type', 'use_default_eula', 'eula_text', 'require_acceptance', 'checkin_email', 'image'])
             ->withCount('assets', 'accessories', 'consumables', 'components');
 
         if ($request->has('search')) {
@@ -38,6 +38,9 @@ class CategoriesController extends Controller
 
         $total = $categories->count();
         $categories = $categories->skip($offset)->take($limit)->get();
+        foreach ($categories as $category) {
+            $category->category_type = Helper::translateCategoriesType($category->category_type);
+        }
         return (new CategoriesTransformer)->transformCategories($categories, $total);
 
     }
@@ -48,7 +51,7 @@ class CategoriesController extends Controller
      *
      * @author [A. Gianotto] [<snipe@snipe.net>]
      * @since [v4.0]
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -69,7 +72,7 @@ class CategoriesController extends Controller
      *
      * @author [A. Gianotto] [<snipe@snipe.net>]
      * @since [v4.0]
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -86,8 +89,8 @@ class CategoriesController extends Controller
      *
      * @author [A. Gianotto] [<snipe@snipe.net>]
      * @since [v4.0]
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -108,7 +111,7 @@ class CategoriesController extends Controller
      *
      * @author [A. Gianotto] [<snipe@snipe.net>]
      * @since [v4.0]
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -117,16 +120,16 @@ class CategoriesController extends Controller
         $category = Category::findOrFail($id);
 
         if ($category->has_models() > 0) {
-            return response()->json(Helper::formatStandardApiResponse('error', null,  trans('admin/categories/message.assoc_items', ['asset_type'=>'model'])));
+            return response()->json(Helper::formatStandardApiResponse('error', null, trans('admin/categories/message.assoc_items', ['asset_type' => 'model'])));
         } elseif ($category->accessories()->count() > 0) {
-            return response()->json(Helper::formatStandardApiResponse('error', null,  trans('admin/categories/message.assoc_items', ['asset_type'=>'accessory'])));
+            return response()->json(Helper::formatStandardApiResponse('error', null, trans('admin/categories/message.assoc_items', ['asset_type' => 'accessory'])));
         } elseif ($category->consumables()->count() > 0) {
-            return response()->json(Helper::formatStandardApiResponse('error', null,  trans('admin/categories/message.assoc_items', ['asset_type'=>'consumable'])));
+            return response()->json(Helper::formatStandardApiResponse('error', null, trans('admin/categories/message.assoc_items', ['asset_type' => 'consumable'])));
         } elseif ($category->components()->count() > 0) {
-            return response()->json(Helper::formatStandardApiResponse('error', null,  trans('admin/categories/message.assoc_items', ['asset_type'=>'component'])));
+            return response()->json(Helper::formatStandardApiResponse('error', null, trans('admin/categories/message.assoc_items', ['asset_type' => 'component'])));
         }
         $category->delete();
-        return response()->json(Helper::formatStandardApiResponse('success', null,  trans('admin/categories/message.delete.success')));
+        return response()->json(Helper::formatStandardApiResponse('success', null, trans('admin/categories/message.delete.success')));
 
     }
 
@@ -149,7 +152,7 @@ class CategoriesController extends Controller
         ]);
 
         if ($request->has('search')) {
-            $categories = $categories->where('name', 'LIKE', '%'.$request->get('search').'%');
+            $categories = $categories->where('name', 'LIKE', '%' . $request->get('search') . '%');
         }
 
         $categories = $categories->where('category_type', $category_type)->orderBy('name', 'ASC')->paginate(50);
@@ -158,7 +161,7 @@ class CategoriesController extends Controller
         // This lets us have more flexibility in special cases like assets, where
         // they may not have a ->name value but we want to display something anyway
         foreach ($categories as $category) {
-            $category->use_image = ($category->image) ? url('/').'/uploads/categories/'.$category->image : null;
+            $category->use_image = ($category->image) ? url('/') . '/uploads/categories/' . $category->image : null;
         }
 
         return (new SelectlistTransformer)->transformSelectlist($categories);
