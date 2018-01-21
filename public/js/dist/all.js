@@ -18551,7 +18551,7 @@ if (function (t) {
                                 t.processDetail = !1
                             }
                         }
-                    }, [t._v("Cancel")]), t._v(" "), i("button", {staticClass: "btn btn-primary", attrs: {type: "submit"}, on: {click: t.postSave}}, [t._v("Import")]), t._v(" "), t.statusText ? i("div", {
+                    }, [t._v("取消")]), t._v(" "), i("button", {staticClass: "btn btn-primary", attrs: {type: "submit"}, on: {click: t.postSave}}, [t._v("导入")]), t._v(" "), t.statusText ? i("div", {
                         staticClass: "alert alert-success col-md-5 col-md-offset-1",
                         staticStyle: {"text-align": "left"}
                     }, [t._v(t._s(this.statusText))]) : t._e()])])
