@@ -472,7 +472,7 @@
                     data-toggle="tooltip"
                     data-placement="right"
                     title="{{ $localPermission['note'] }}">
-                    <h4>{{ $area . ': ' . $localPermission['label'] }}</h4>
+                    <h4>{{  translation_permission_conf($area). ': ' . $localPermission['label'] }}</h4>
                   </td>
 
                   <td class="col-md-1 permissions-item">
@@ -502,7 +502,7 @@
 
                 <tr class="header-row permissions-row">
                   <td class="col-md-5 header-name">
-                    <h3>{{ $area }}</h3>
+                    <h3>{{ translation_permission_conf($area) }}</h3>
                   </td>
                   <td class="col-md-1 permissions-item">
                     {{ Form::radio("$area", '1',false,['value'=>"grant", 'class'=>'minimal', 'data-checker-group' => str_slug($area)]) }}
