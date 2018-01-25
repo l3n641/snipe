@@ -18651,24 +18651,25 @@ if (function (t) {
                         options: {
                             importType: this.file.import_type,
                             update: !1,
-                            importTypes: [{id: "asset", text: "资产"}, {id: "accessory", text: "饰品"}, {id: "consumable", text: "耗材"}, {id: "component", text: "组件"}, {id: "license", text: "执照"}, {id: "user", text: "用户"}],
+                            importTypes: [{id: "asset", text: "资产"}, {id: "accessory", text: "附属品"}, {id: "consumable", text: "消耗品"}, {id: "component", text: "组件"}, {id: "license", text: "许可证"}, {id: "user", text: "用户"}],
                             statusText: null
                         },
                         columnOptions: {
-                            general: [{id: "category", text: "类别"}, {id: "company", text: "公司"}, {id: "checkout_to", text: "结帐"}, {id: "email", text: "邮箱"}, {id: "first_name", text: "名字"}, {id: "item_name", text: "内容名称"}, {
+                            general: [{id: "category", text: "类别"}, {id: "company", text: "公司"}, {id: "checkout_to", text: "借出"}, {id: "email", text: "邮箱"}, {id: "first_name", text: "名字"}, {id: "item_name", text: "名称"}, {
                                 id: "last_name",
                                 text: "姓"
-                            }, {id: "location", text: "地点"}, {id: "maintained", text: "维护"}, {id: "manufacturer", text: "制造"}, {id: "notes", text: "笔记"}, {id: "order_number", text: "排序值"}, {id: "purchase_cost", text: "购买成本"}, {
+                            }, {id: "location", text: "位置"}, {id: "maintained", text: "寿命"}, {id: "manufacturer", text: "制造商"}, {id: "notes", text: "备注"}, {id: "order_number", text: "订单号"}, {id: "purchase_cost", text: "采购价格"}, {
                                 id: "purchase_date",
-                                text: "购买时间"
-                            }, {id: "quantity", text: "数量"}, {id: "requestable", text: "可申请恩"}, {id: "serial", text: "序列号"}, {id: "supplier", text: "供应商"}, {id: "username", text: "用户名"}],
-                            assets: [{id: "asset_tag", text: "资产标签"}, {id: "asset_model", text: "模型名称"}, {id: "image", text: "图片名称"}, {id: "model_number", text: " 模型号"}, {id: "name", text: "完整名称"}, {id: "status", text: "状态"}, {
+                                text: "购买日期"
+                            }, {id: "quantity", text: "总计"}, {id: "requestable", text: "是否可申请"}, {id: "serial", text: "序列号"}, {id: "supplier", text: "供应商"}, {id: "username", text: "用户名"}],
+                            assets: [{id: "asset_tag", text: "资产标签"}, {id: "asset_model", text: "型号"}, {id: "image", text: "图片名称"}, {id: "model_number", text: " 型号id"}, {id: "name", text: "name"}, {id: "status", text: "状态"}, {
+				    
                                 id: "warranty_months",
-                                text: "保修月份"
+                                text: "质保"
                             }],
-                            licenses: [{id: "expiration_date", text: "截止日期"}, {id: "license_email", text: "授权的电子邮件"}, {id: "license_name", text: "授权的名字"}, {id: "purchase_order", text: "采购订单"}, {id: "reassignable", text: "重新指派"}, {
+                            licenses: [{id: "expiration_date", text: "有效期"}, {id: "license_email", text: "许可电子邮件"}, {id: "license_name", text: "许可人名字"}, {id: "purchase_order", text: "采购订单"}, {id: "reassignable", text: "重新指派"}, {
                                 id: "seats",
-                                text: "座位"
+                                text: "允许使用次数"
                             }],
                             users: [{id: "employee_num", text: "员工编号"}, {id: "jobtitle", text: "职称"}, {id: "phone_number", text: "电话号码"}],
                             customFields: this.customFields

@@ -122,7 +122,7 @@
     'markdown'				=> '该字段可以使用 <a href="https://help.github.com/articles/github-flavored-markdown/">Github flavored markdown</a>',
     'min_amt'				=> '告警界限',
     'min_amt_help'	=> '触发告警的最小数量',
-    'model_no'				=> '型号',
+    'model_no'				=> '型号id',
     'months'				=> '月数',
     'moreinfo'				=> '更多信息',
     'name'					=> '名称',

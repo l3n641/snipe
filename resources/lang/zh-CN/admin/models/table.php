@@ -5,7 +5,7 @@ return array(
     'create'				=> '创建资产模板',
     'created_at' 			=> '创建于',
     'eol'	 				=> '寿命',
-    'modelnumber'   		=> '型号',
+    'modelnumber'   		=> '型号id',
     'name'      			=> '资产型号名称',
     'numassets' 			=> '资产',
     'title'					=> '资产模板',

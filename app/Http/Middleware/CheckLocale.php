@@ -10,26 +10,26 @@ use App\Models\Setting;
 
 class CheckLocale
 {
-  /**
-   * Handle the locale for the user, default to settings otherwise
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @param  \Closure  $next
-   * @param  string|null  $guard
-   * @return mixed
-   */
+    /**
+     * Handle the locale for the user, default to settings otherwise
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
+     * @param  string|null $guard
+     * @return mixed
+     */
 
     public function handle($request, Closure $next, $guard = null)
     {
 
 
-        if (Setting::getSettings()) {
+        if (false) {
             // User's preference
             if (($request->user()) && ($request->user()->locale)) {
                 \App::setLocale($request->user()->locale);
 
                 // App setting preference
-            } elseif ((Setting::getSettings()) &&  (Setting::getSettings()->locale!='')) {
+            } elseif ((Setting::getSettings()) && (Setting::getSettings()->locale != '')) {
                 \App::setLocale(Setting::getSettings()->locale);
 
                 // Default app setting

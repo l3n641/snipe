@@ -165,7 +165,7 @@ class AssetPresenter extends Presenter
                 "searchable" => false,
                 "sortable" => false,
                 "visible" => false,
-                "title" => 'Warranty Expires',
+                "title" => "质保有效期",
                 "formatter" => "dateDisplayFormatter"
             ],[
                 "field" => "notes",

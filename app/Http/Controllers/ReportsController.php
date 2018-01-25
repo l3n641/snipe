@@ -499,11 +499,11 @@ class ReportsController extends Controller
             }
 
             if ($request->has('username')) {
-                $header[] = 'Username';
+                $header[] = '用户名';
             }
 
             if ($request->has('employee_num')) {
-                $header[] = 'Employee No.';
+                $header[] = '员工号';
             }
 
             if ($request->has('status')) {
@@ -511,8 +511,8 @@ class ReportsController extends Controller
             }
 
             if ($request->has('warranty')) {
-                $header[] = 'Warranty';
-                $header[] = 'Warranty Expires';
+                $header[] = '质保';
+                $header[] = '质保有效期';
             }
             if ($request->has('depreciation')) {
                 $header[] = 'Value';
