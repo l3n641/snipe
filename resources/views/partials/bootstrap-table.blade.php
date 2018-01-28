@@ -292,9 +292,9 @@
             if ((row.available_actions.checkout == true) && (row.user_can_checkout == true) && (!row.assigned_to)) {
                 // case for licenses
                 if (row.next_seat) {
-                    return '<a href="{{ url('/') }}/' + destination + '/' + row.next_seat + '/checkout" class="btn btn-sm bg-maroon" data-tooltip="true" title="Check this item out to a user">{{ trans('general.checkout') }}</a>';
+                    return '<a href="{{ url('/') }}/' + destination + '/' + row.next_seat + '/checkout" class="btn btn-sm bg-maroon" data-tooltip="true" title="">{{ trans('general.checkout') }}</a>';
                 } else {
-                    return '<a href="{{ url('/') }}/' + destination + '/' + row.id + '/checkout" class="btn btn-sm bg-maroon" data-tooltip="true" title="Check this item out to a user">{{ trans('general.checkout') }}</a>';
+                    return '<a href="{{ url('/') }}/' + destination + '/' + row.id + '/checkout" class="btn btn-sm bg-maroon" data-tooltip="true" title="">{{ trans('general.checkout') }}</a>';
                 }
 
 
