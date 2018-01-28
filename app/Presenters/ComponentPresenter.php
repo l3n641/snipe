@@ -114,7 +114,7 @@ class ComponentPresenter extends Presenter
             "searchable" => false,
             "sortable" => false,
             "switchable" => true,
-            "title" => 'Checkin/Checkout',
+            "title" => '借出/归还',
             "visible" => true,
             "formatter" => "componentsInOutFormatter",
         ];

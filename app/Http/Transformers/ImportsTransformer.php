@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Transformers;
 
 use App\Models\Import;
@@ -20,22 +21,37 @@ class ImportsTransformer
     public function transformImport(Import $import)
     {
         $array = [
-            'id' => (int)  $import->id,
+            'id' => (int)$import->id,
             'file_path' => e($import->file_path),
             'filesize' => Setting::fileSizeConvert($import->filesize),
             'name' => e($import->name),
             'import_type' => e($import->import_type),
-            'created_at' => $import->created_at->diffForHumans(),
+            'created_at' => $this->translateTimeFormat($import->created_at->diffForHumans()),
             'header_row' => $import->header_row,
-            'first_row'  => $import->first_row,
-            'field_map'  => $import->field_map,
+            'first_row' => $import->first_row,
+            'field_map' => $import->field_map,
         ];
 
         return $array;
     }
 
-    public function transformImportsDatatable($imports)
+    public function translateTimeFormat($date)
     {
-        return (new DatatablesTransformer)->transformDatatables($imports);
+        $origin = [
+            '/year[s]?/',
+            '/month[s]?/',
+            '/day[s]?/',
+            '/week[s]?/',
+            '/hour[s]?/',
+            '/minute[s]?/',
+            '/second[s]?/',
+            '/ago/',
+        ];
+        $destino = [
+            '年', '月', '天', '周', "小时", '分钟', '秒', "之前"
+        ];
+
+        $result = preg_replace($origin, $destino, $date);
+        return $result;
     }
 }

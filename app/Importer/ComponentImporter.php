@@ -1,23 +1,18 @@
 <?php
-
 namespace App\Importer;
-
 use App\Models\Asset;
 use App\Models\Component;
-
 class ComponentImporter extends ItemImporter
 {
     public function __construct($filename)
     {
         parent::__construct($filename);
     }
-
     protected function handle($row)
     {
         parent::handle($row);
         $this->createComponentIfNotExists();
     }
-
     /**
      * Create a component if a duplicate does not exist
      *
@@ -27,31 +22,28 @@ class ComponentImporter extends ItemImporter
     public function createComponentIfNotExists()
     {
         $component = null;
-        $editingComponent = false;
         $this->log("Creating Component");
-        $component = Component::where('name', $this->item['name']);
-
+        $component = Component::where('name', $this->item['name'])
+            ->where('serial', $this->item['serial'])
+            ->first();
         if ($component) {
-            $editingComponent = true;
-            $this->log('A matching Component ' . $this->item["name"] . ' already exists.  ');
+            $this->log('A matching Component ' . $this->item["name"] . ' with serial ' .$this->item['serial'].' already exists.  ');
             if (!$this->updating) {
                 $this->log("Skipping Component");
                 return;
             }
             $this->log("Updating Component");
-            $component = $this->components[$componentId];
-            $component->update($this->sanitizeItemFor($component));
+            $component->update($this->sanitizeItemForUpdating($component));
             $component->save();
             return;
         }
         $this->log("No matching component, creating one");
         $component = new Component;
-        $component->fill($$this->sanitizeItemForStoring($component));
-
+        $component->fill($this->sanitizeItemForStoring($component));
+        $component->unsetEventDispatcher();
         if ($component->save()) {
             $component->logCreate('Imported using CSV Importer');
             $this->log("Component " . $this->item["name"] . ' was created');
-
             // If we have an asset tag, checkout to that asset.
             if (isset($this->item['asset_tag']) && ($asset = Asset::where('asset_tag', $this->item['asset_tag'])->first())) {
                 $component->assets()->attach($component->id, [

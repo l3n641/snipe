@@ -104,7 +104,7 @@
         paginationPreText: "{{ trans('general.previous') }}",
         paginationNextText: "{{ trans('general.next') }}",
         formatLoadingMessage: function () {
-            return '<h4><i class="fa fa-spinner fa-spin" aria-hidden="true"></i> Loading... please wait.... </h4>';
+            return '<h4><i class="fa fa-spinner fa-spin" aria-hidden="true"></i> 正在加载中... </h4>';
         },
         pageList: ['20', '30','50','100','150','200'],
         icons: {
