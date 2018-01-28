@@ -57,6 +57,8 @@ class Consumable extends SnipeModel
         'purchase_cost',
         'purchase_date',
         'qty',
+        'item_no',
+        'model_number',
         'requestable'
     ];
 

@@ -18661,17 +18661,19 @@ if (function (t) {
                             }, {id: "location", text: "位置"}, {id: "maintained", text: "寿命"}, {id: "manufacturer", text: "制造商"}, {id: "notes", text: "备注"}, {id: "order_number", text: "订单号"}, {id: "purchase_cost", text: "采购价格"}, {
                                 id: "purchase_date",
                                 text: "购买日期"
-                            }, {id: "quantity", text: "总计"}, {id: "requestable", text: "是否可申请"}, {id: "serial", text: "序列号"}, {id: "supplier", text: "供应商"}, {id: "username", text: "用户名"}],
-                            assets: [{id: "asset_tag", text: "资产标签"}, {id: "asset_model", text: "型号"}, {id: "image", text: "图片名称"}, {id: "model_number", text: " 型号id"}, {id: "name", text: "name"}, {id: "status", text: "状态"}, {
+                            }, {id: "model_number", text: " 型号id"},{id: "min_amt", text: " 告警界限"}, {id: "quantity", text: "总计"}, {id: "requestable", text: "是否可申请"}, {id: "serial", text: "序列号"}, {id: "supplier", text: "供应商"}, {id: "username", text: "用户名"}],
+                            assets: [{id: "asset_tag", text: "资产标签"}, {id: "asset_model", text: "型号"}, {id: "image", text: "图片名称"}, {id: "name", text: "name"}, {id: "status", text: "状态"}, {
 				    
                                 id: "warranty_months",
                                 text: "质保"
-                            }],
-                            licenses: [{id: "expiration_date", text: "有效期"}, {id: "license_email", text: "许可电子邮件"}, {id: "license_name", text: "许可人名字"}, {id: "purchase_order", text: "采购订单"}, {id: "reassignable", text: "重新指派"}, {
+                            },{id: "last_audit_date", text: "上一次盘点的时间"},{id: "next_audit_date", text: "下一次盘点的时间"},], 
+                            licenses: [{id: "expiration_date", text: "有效期"}, {id: "license_email", text: "许可电子邮件"}, {id: "license_name", text: "许可人名字"}, {id: "purchase_order", text: "采购订单号码"}, {id: "reassignable", text: "重新指派"}, {
                                 id: "seats",
                                 text: "允许使用次数"
                             }],
+                            consumable: [{id: "item_no", text: "项目编号"}],
                             users: [{id: "employee_num", text: "员工编号"}, {id: "jobtitle", text: "职称"}, {id: "phone_number", text: "电话号码"}],
+
                             customFields: this.customFields
                         },
                         columnMappings: this.file.field_map || {},
@@ -18684,7 +18686,9 @@ if (function (t) {
                         switch (this.options.importType) {
                             case"asset":
                                 return this.columnOptions.general.concat(this.columnOptions.assets).concat(this.columnOptions.customFields);
-                            case"license":
+                            case"consumable":
+                                return this.columnOptions.general.concat(this.columnOptions.consumable);
+                             case"license":
                                 return this.columnOptions.general.concat(this.columnOptions.licenses);
                             case"user":
                                 return this.columnOptions.general.concat(this.columnOptions.users)

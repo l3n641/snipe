@@ -64,6 +64,7 @@ class Accessory extends SnipeModel
         'supplier_id',
         'image',
         'qty',
+        'min_amt',
         'requestable'
     ];
 

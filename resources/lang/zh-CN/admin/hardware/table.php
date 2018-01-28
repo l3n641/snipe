@@ -14,7 +14,7 @@ return array(
     'id'      		=> '编号',
     'location' 		=> '位置',
     'purchase_cost'	=> '花费',
-    'purchase_date'	=> '已购买',
+    'purchase_date'	=> '购买时间',
     'serial'   		=> '序列号',
     'status'   		=> '状态',
     'title'      	=> '资产',

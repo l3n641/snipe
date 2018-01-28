@@ -22,6 +22,8 @@ class AssetImporter extends ItemImporter
     {
         // ItemImporter handles the general fetching.
         parent::handle($row);
+        $this->item["last_audit_date"] = $this->findCsvMatch($row, "last_audit_date");
+        $this->item["next_audit_date"] = $this->findCsvMatch($row, "next_audit_date");
 
         if ($this->customFields) {
 
